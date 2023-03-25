@@ -1,5 +1,6 @@
 import React from "react";
 import './DisplayInfor.scss';
+import logo from "./../logo.svg";
 
 class DisplayIinfo extends React.Component {
     state = {
@@ -16,6 +17,7 @@ class DisplayIinfo extends React.Component {
         // props => viết tắt của properties
         return (
             <div className='display-infor-container'>
+                <img src={logo} />
                 <div>
                     <span onClick={() => { this.handelShowHide() }}>
                         {this.state.isShowListUser === true ? "Ẩn danh sách người dùng : " : "Hiện danh sách người dùng"}
