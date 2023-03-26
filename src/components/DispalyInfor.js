@@ -17,7 +17,7 @@ class DisplayIinfo extends React.Component {
         // props => viết tắt của properties
         return (
             <div className='display-infor-container'>
-                <img src={logo} />
+                {/* <img src={logo} /> */}
                 <div>
                     <span onClick={() => { this.handelShowHide() }}>
                         {this.state.isShowListUser === true ? "Ẩn danh sách người dùng : " : "Hiện danh sách người dùng"}
@@ -30,6 +30,9 @@ class DisplayIinfo extends React.Component {
                                 <div key={user.id} className={+user.age > 18 ? "red" : "green"}>
                                     <div >Tên tôi là {user.name}</div>
                                     <div>Tôi {user.age} tuổi</div>
+                                    <div>
+                                        <button onClick={() => this.props.handleDeleteUser(user.id)}> Xoá </button>
+                                    </div>
                                     <hr></hr>
                                 </div>
                             )
